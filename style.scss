@@ -1,0 +1,57 @@
+$bg-color: white;
+$blue: slateblue;
+$darkgay: darkgray;
+$white:white;
+$black:black;
+body {
+  background-color: gainsboro;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.box {
+  background-color: $bg-color;
+  width: 400px;
+  height: auto;
+  padding: 20px;
+  border-radius: 5px;
+  input {
+    padding: 8px 0 8px 5px;
+    border: 1px solid $darkgay;
+    border-radius: 5px;
+    outline: 0;
+  }
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px 0 10px 0;
+
+  :focus {
+    border: 1px solid $blue;
+  }
+  label{
+    margin-bottom: 5px;
+  }
+}
+.btnProperty{
+  background-color: $white;
+  color: $black;
+  padding: 5px 20px 5px 20px;
+  border: 0;
+  border-radius: 3px;
+  margin: 15px 0 0 0;
+}
+.form-btn-group{
+  
+  .btnsb{
+    @extend .btnProperty;
+    border: 1px solid $blue;
+  }
+  .btncancel{
+    @extend .btnProperty;
+    border: 1px solid $darkgay;
+  }
+}
